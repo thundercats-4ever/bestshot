@@ -1,3 +1,4 @@
+
 const searchBtn = document.getElementById("searchBtn");
 const searchFirst = document.getElementById("searchFirst");
 const searchLast = document.getElementById("searchLast");
@@ -9,6 +10,10 @@ function displayResults(stats) {
   ).innerHTML = `<div>Average points per game: ${stats.pts}</div> <div>Average rebounds per game: ${stats.reb}</div>`;
 }
 function getApi(event) {
+
+  
+function getApi() {
+
   // fetch request gets the data from the api
   event.preventDefault();
   let searchLast = document.querySelector("#searchLast").value.toLowerCase();
@@ -41,4 +46,13 @@ function getApi(event) {
 }
 
 // Event Listeners
+
 searchBtn.addEventListener("click", getApi);
+
+
+// Event Listeners
+// Choose a team from dropdown TODO
+
+// Type PLayer name and click submit TODO
+
+
