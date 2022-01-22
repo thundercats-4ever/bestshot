@@ -1,3 +1,4 @@
+  
 function getApi() {
   // fetch request gets the data from the api
   let requestUrl = "https://www.balldontlie.io/api/v1/players/237";
@@ -16,3 +17,9 @@ getApi();
 // Type PLayer name and click submit TODO
 
 // Event Listeners
+
+// Event Listeners
+// Choose a team from dropdown TODO
+
+// Type PLayer name and click submit TODO
+
