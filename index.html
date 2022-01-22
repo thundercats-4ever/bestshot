@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Project 1</title>
@@ -12,8 +15,8 @@
 
 <body>
     <div>
-        <div class="">
-            <aside class="">
+        <div class="m-8">
+            <aside class="bg-orange-200">
                 <h1>Best Shot</h1>
 
                 <div class="flex">
@@ -27,35 +30,36 @@
                             </span>
                             <!-- Player Search Bar -->
                             <input
-                                class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                                class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md my-3 py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
                                 placeholder="Player First Name" type="text" id="searchFirst" name="search" />
                             <input
-                                class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                                class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md my-3 py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
                                 placeholder="Player last Name" type="text" id="searchLast" name="search" />
 
-                            <button id="searchBtn">click here</button>
+                            <button class="bg-orange-400 rounded-full mb-2.5 text-white p-2 px-3.5"
+                                id="searchBtn">Submit</button>
                         </label>
                         <!-- Dropdown menu -->
-                        
-                        
-                    <select class="py-1" id="teams" aria-labelledby="dropdownButton">
-                        <option data-id="1">
-                            atlanta Hawks
-                        </option>
-                        <option data-id="2">
-                            Boston celtics
-                        </option>
-                        <option data-id="5">
-                            Chicago Bulls
-                        </option>
-                        <option data-id="14">
-                            LA Lakers
 
-                        </option>
-                    </select>
-                           
+
+                        <select class="border py-3 p-3" id="teams" aria-labelledby="dropdownButton">
+                            <option data-id="1">
+                                Atlanta Hawks
+                            </option>
+                            <option data-id="2">
+                                Boston Celtics
+                            </option>
+                            <option data-id="5">
+                                Chicago Bulls
+                            </option>
+                            <option data-id="14">
+                                LA Lakers
+
+                            </option>
+                        </select>
+
                     </form>
-                    
+
                     <!-- Hide Both Div's until one is chosen -->
                     <div class="pl-4" id="results">Results
                         <!-- Display Player Name, Average Points, Team they play for. -->
