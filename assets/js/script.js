@@ -1,4 +1,3 @@
-
 const searchBtn = document.getElementById("searchBtn");
 const searchFirst = document.getElementById("searchFirst");
 const searchLast = document.getElementById("searchLast");
@@ -72,6 +71,11 @@ function getTeams() {
 // Event Listeners
 searchBtn.addEventListener("click", getApi);
 teamDrop.addEventListener("change", getTeams);
+
+// Event Listeners
+// Choose a team from dropdown TODO
+
+// Type PLayer name and click submit TODO
 
 // Event Listeners
 // Choose a team from dropdown TODO
