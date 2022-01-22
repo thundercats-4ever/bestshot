@@ -39,7 +39,6 @@ function getApi(event) {
         document.getElementById("results").innerHTML = "No results";
       }
     });
-  
 }
 
 function displayTeamResults(stats) {
@@ -50,22 +49,19 @@ function displayTeamResults(stats) {
       "results"
     ).innerHTML += `<div>${game.home_team.full_name}: ${game.home_team_score} -${game.visitor_team.full_name}: ${game.visitor_team_score}</div>`;
   });
-  
 }
 function getTeams() {
-  const teamId = this.selectedOptions[0].getAttribute("data-id") ;
+  const teamId = this.selectedOptions[0].getAttribute("data-id");
   let teamsUrl = `https://www.balldontlie.io/api/v1/games/?seasons[]=2018&team_ids[]=${teamId}`;
 
   fetch(teamsUrl)
-    .then(function(response) {
+    .then(function (response) {
       return response.json();
     })
-    .then(function(teamData) {
+    .then(function (teamData) {
       console.log(teamData);
       displayTeamResults(teamData.data);
-
-    })
-
+    });
 }
 
 // Event Listeners

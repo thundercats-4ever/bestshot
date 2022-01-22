@@ -1,4 +1,8 @@
 /* If Needed Extend Tailwinds */
 /* Make Layout First  TODO*/
 /* Style Guts of Each Layout Item (Components)  TODO*/
+h1 {
+  font-family: "Alfa Slab One", cursive;
+  font-size: 4rem !important;
+}
 /*  */
