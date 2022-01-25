@@ -47,7 +47,7 @@ function displayTeamResults(stats) {
   stats.forEach((game) => {
     document.getElementById(
       "results"
-    ).innerHTML += `<div>${game.home_team.full_name}: ${game.home_team_score} -${game.visitor_team.full_name}: ${game.visitor_team_score}</div>`;
+    ).innerHTML += `<div>${game.home_team.full_name}: ${game.home_team_score} - ${game.visitor_team.full_name}: ${game.visitor_team_score}</div>`;
   });
 }
 function getTeams() {
