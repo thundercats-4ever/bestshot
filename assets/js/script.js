@@ -1,7 +1,9 @@
 const searchBtn = document.getElementById("searchBtn");
 const searchFirst = document.getElementById("searchFirst");
 const searchLast = document.getElementById("searchLast");
-const teamDrop = document.getElementById("teams");
+const teamDrop = document.getElementById("populateTeams");
+const pageClick = document.querySelector(".js-page");
+let teamId = 1;
 
 function displayResults(stats) {
   console.log(stats);
@@ -51,8 +53,7 @@ function displayTeamResults(stats) {
   });
 }
 function getTeams() {
-  const teamId = this.selectedOptions[0].getAttribute("data-id");
-  let teamsUrl = `https://www.balldontlie.io/api/v1/games/?seasons[]=2018&team_ids[]=${teamId}`;
+  let teamsUrl = `https://www.balldontlie.io/api/v1/teams`;
 
   fetch(teamsUrl)
     .then(function (response) {
@@ -60,20 +61,46 @@ function getTeams() {
     })
     .then(function (teamData) {
       console.log(teamData);
+      teamData.data.forEach((team) => {
+        document.getElementById(
+          "populateTeams"
+        ).innerHTML += `<option data-id="${team.id}">${team.full_name}</option>`;
+      });
+    });
+}
+function getTeamsStats(page) {
+  const pageNumber = page || 1;
+  teamId =
+    this.selectedOptions !== undefined
+      ? this.selectedOptions[0].getAttribute("data-id")
+      : teamId;
+  let teamsUrl = `https://www.balldontlie.io/api/v1/games/?seasons[]=2018&team_ids[]=${teamId}&page=${pageNumber}`;
+  document.getElementById("pager").innerHTML = "";
+  fetch(teamsUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (teamData) {
+      for (i = 1; i < teamData.meta.total_pages + 1; i++) {
+        document.getElementById(
+          "pager"
+        ).innerHTML += `<button class="js-page p-2 bg-orange m-2.5" data-page="${i}">${i}</button>`;
+      }
+      console.log(teamData);
       displayTeamResults(teamData.data);
     });
 }
+getTeams();
 
 // Event Listeners
 searchBtn.addEventListener("click", getApi);
-teamDrop.addEventListener("change", getTeams);
-
-// Event Listeners
-// Choose a team from dropdown TODO
-
-// Type PLayer name and click submit TODO
-
-// Event Listeners
-// Choose a team from dropdown TODO
-
-// Type PLayer name and click submit TODO
+teamDrop.addEventListener("change", getTeamsStats);
+const buttons = document.querySelectorAll(".js-page");
+buttons.forEach(function (currentBtn) {
+  currentBtn.addEventListener("click", getTeamsStats);
+});
+document.body.addEventListener("click", function (event) {
+  if (event.target.className.includes("js-page")) {
+    getTeamsStats(event.target.getAttribute("data-page"));
+  }
+});

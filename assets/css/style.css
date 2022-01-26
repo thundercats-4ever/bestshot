@@ -5,4 +5,8 @@ h1 {
   font-family: "Alfa Slab One", cursive;
   font-size: 4rem !important;
 }
+
+.ap-n {
+  appearance: none;
+}
 /*  */
