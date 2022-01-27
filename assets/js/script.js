@@ -9,7 +9,7 @@ function displayResults(stats) {
   console.log(stats);
   document.getElementById(
     "results"
-  ).innerHTML = `<div>Average points per game: ${stats.pts}</div> <div>Average rebounds per game: ${stats.reb}</div>`;
+  ).innerHTML = `<div>Average points per game: ${stats.pts}</div> <div>Average rebounds per game: ${stats.reb}</div><div>Average assists per game: ${stats.ast}</div>`;
 }
 function getApi(event) {
   // fetch request gets the data from the api
@@ -49,7 +49,7 @@ function displayTeamResults(stats) {
   stats.forEach((game) => {
     document.getElementById(
       "results"
-    ).innerHTML += `<div>${game.home_team.full_name}: ${game.home_team_score} - ${game.visitor_team.full_name}: ${game.visitor_team_score}</div>`;
+    ).innerHTML += `<div class=""><div class="">${game.home_team.full_name}</div><div class="">${game.home_team_score}</div><div class=""> - </div> <div class="">${game.visitor_team.full_name}</div><div class=""> ${game.visitor_team_score}</div></div>`;
   });
 }
 function getTeams() {
@@ -61,6 +61,7 @@ function getTeams() {
     })
     .then(function (teamData) {
       console.log(teamData);
+      document.getElementById("populateTeams").innerHTML += `<option selected disabled>Choose Team</option>`;
       teamData.data.forEach((team) => {
         document.getElementById(
           "populateTeams"
