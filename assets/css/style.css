@@ -5,6 +5,14 @@ h1 {
   font-family: "Alfa Slab One", cursive;
   font-size: 4rem !important;
 }
+h2 {
+  font-weight: bold !important;
+  font-size: x-large !important;
+}
+h3 {
+  font-weight: bold !important;
+  font-size: larger !important;
+}
 
 .ap-n {
   appearance: none;
@@ -12,5 +20,36 @@ h1 {
 
 .jc-c {
   justify-content: center;
+}
+
+.d-f {
+  display: flex;
+}
+.jc-sb {
+  justify-content: space-between;
+}
+.f-w-w {
+  flex-wrap: wrap;
+}
+.jc-l {
+  justify-content: left;
+}
+.f-d-c {
+  flex-direction: column;
+}
+.p-1 {
+  padding: 1rem;
+}
+.f-g1 {
+  flex-grow: 1;
+}
+.d-n {
+  display: none;
+}
+.img-h-w {
+  max-height: 100px;
+}
+.img-w {
+  width: 20%;
 }
 /*  */
