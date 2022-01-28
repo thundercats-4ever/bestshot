@@ -10,62 +10,70 @@
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Project 1</title>
+    <title>Best Shot</title>
+    <link rel="shortcut icon" type="image/jpg" href="./img/best-shot-favicon.png" />
+
 </head>
 
-<body>
-    <div>
-        <div class="m-8">
-            <aside class="bg-orange-200">
+<body class="bg-orange-200">
+
+    <div class="p-9">
+        <aside>
+            <div class="d-f jc-sb">
                 <h1>Best Shot</h1>
+                <img class="img-h-w" src="./img/NBA-LOGO.png">
+            </div>
+            <div class="flex f-w-w">
+                <form class="w-60">
+                    <label class="relative block">
+                        <span class="sr-only">Search</span>
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                            <svg class="h-5 w-5 fill-slate-300" viewBox="0 0 20 20">
+                                <!-- ... -->
+                            </svg>
+                        </span>
+                        <!-- Player Search Bar -->
+                        <label for="searchFirst">Search NBA Player Stats</label>
+                        <input
+                            class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md my-3 py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                            placeholder="Player First Name" type="text" id="searchFirst" name="search" />
+                        <input
+                            class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md my-3 py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                            placeholder="Player last Name" type="text" id="searchLast" name="search" />
 
-                <div class="flex">
-                    <form class="w-48">
-                        <label class="relative block">
-                            <span class="sr-only">Search</span>
-                            <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-                                <svg class="h-5 w-5 fill-slate-300" viewBox="0 0 20 20">
-                                    <!-- ... -->
-                                </svg>
-                            </span>
-                            <!-- Player Search Bar -->
-                            <input
-                                class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md my-3 py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
-                                placeholder="Player First Name" type="text" id="searchFirst" name="search" />
-                            <input
-                                class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md my-3 py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
-                                placeholder="Player last Name" type="text" id="searchLast" name="search" />
+                        <button class="bg-orange-400 rounded-full mb-6 text-white p-2 px-3.5" id="searchBtn">Get
+                            Player Stats</button>
 
-                            <button class="bg-orange-400 rounded-full mb-2.5 text-white p-2 px-3.5"
-                                id="searchBtn">Submit</button>
-                        </label>
-                        <!-- Dropdown menu -->
+                    </label>
+                    <!-- Dropdown menu -->
+                    <div class="pb-4">
+                        <label class="" for="searchFirst">Search NBA Team Schedule</label>
+                    </div>
+                    <select class="ap-n bg-orange-400 rounded-full mb-2.5 text-white p-2 px-3.5" id="populateTeams">
 
-
-                        <select class="ap-n bg-orange-400 rounded-full mb-2.5 text-white p-2 px-3.5" id="populateTeams">
-
-                        </select>
+                    </select>
 
 
 
-                    </form>
-
-                    <div class="jc-c w-full text-center">
-                        <!-- Hide Both Div's until one is chosen -->
-                        <div class="px-14" id="results">Results
-                            <!-- Display Player Name, Average Points, Team they play for. -->
-                            <!-- If User Chooses Player, Show player average stats box. average points -->
-                        </div>
-
+                </form>
+                <div class="text-center d-f jc-c f-g1">
+                    <!-- Hide Both Div's until one is chosen -->
+                    <div class="px-14" id="results">Results
+                        <!-- Display Player Name, Average Points, Team they play for. -->
+                        <!-- If User Chooses Player, Show player average stats box. average points -->
                     </div>
 
                 </div>
-            </aside>
-            <div id="pager">
+
 
             </div>
+        </aside>
+
+        <div id="pager" class="d-n">
+
         </div>
     </div>
+
     <!-- Flowbite JS -->
     <script src="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/flowbite.bundle.js"></script>
 
