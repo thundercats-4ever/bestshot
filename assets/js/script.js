@@ -6,10 +6,9 @@ const pageClick = document.querySelector(".js-page");
 let teamId = 1;
 
 function displayResults(stats) {
-  console.log(stats);
   const playerId = stats.player_id;
   let playerUrl = `https://www.balldontlie.io/api/v1/players/${playerId}`;
-  console.log(playerUrl);
+
   fetch(playerUrl)
     .then(function (response) {
       return response.json();
@@ -18,7 +17,7 @@ function displayResults(stats) {
       document.getElementById("pager").classList.add("d-n");
       document.getElementById(
         "results"
-      ).innerHTML = `<div class="p3"><h2>${playerData.first_name} ${playerData.last_name}</h2><h3>${playerData.team.full_name}</h3><div>Average points per game: ${stats.pts}</div> <div>Average rebounds per game: ${stats.reb}</div><div>Average assists per game: ${stats.ast}</div></div>`;
+      ).innerHTML = `<div class="p-3" ><h2>${playerData.first_name} ${playerData.last_name}</h2><h3>${playerData.team.full_name}</h3><div>Average points per game: ${stats.pts}</div> <div>Average rebounds per game: ${stats.reb}</div><div>Average assists per game: ${stats.ast}</div></div>`;
     });
 }
 function getApi(event) {
@@ -34,17 +33,15 @@ function getApi(event) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
       if (data.data.length > 0) {
         const playerId = data.data[0].id;
         let playerUrl = `https://www.balldontlie.io/api/v1/season_averages?player_ids[]=${playerId}`;
-        console.log(playerUrl);
+
         fetch(playerUrl)
           .then(function (response) {
             return response.json();
           })
           .then(function (playerData) {
-            console.log(playerData);
             displayResults(playerData.data[0]);
           });
       } else {
@@ -54,7 +51,6 @@ function getApi(event) {
 }
 
 function displayTeamResults(stats) {
-  console.log(stats);
   document.getElementById("pager").classList.remove("d-n");
 
   stats.forEach((game) => {
@@ -71,7 +67,6 @@ function getTeams() {
       return response.json();
     })
     .then(function (teamData) {
-      console.log(teamData);
       document.getElementById(
         "populateTeams"
       ).innerHTML += `<option selected disabled>Choose Team</option>`;
@@ -100,7 +95,7 @@ function getTeamsStats(page) {
           "pager"
         ).innerHTML += `<button class="js-page p-2 bg-orange m-2.5" data-page="${i}">${i}</button>`;
       }
-      console.log(teamData);
+
       document.getElementById("results").innerHTML = "";
       displayTeamResults(teamData.data);
     });
