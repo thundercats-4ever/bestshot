@@ -2,7 +2,7 @@
 
 ## Description
 
-Best Shot is an NBA search database application used to search individual player stats, as well as current team game stats. User who navigate to Best Shot are given the option to either search players with 2 input boxes (one for first name, one for last name.) Underneath the player search input boxes, there is a dynamic drop down menu with every current team in the NBA and when selected, the user is presented with that team's 25 most recent games. If there are more than 25 game search results, at the bottom of the page, there is a pager function when dynamically populates, giving the user the opportunity to search multiple pages of game stats.
+Best Shot is an NBA search database application used to search individual player stats, as well as current team game stats. User who navigates to Best Shot are given the option to either search current players with 2 input boxes (one for first name, one for last name.) Underneath the player search input boxes, there is a dynamic drop down menu with every current team in the NBA and when a team is selected, the user is presented with that team's 25 most recent game stats. If there are more than 25 game search results, at the bottom of the page, there is a pager function which dynamically populates, giving the user the opportunity to search multiple pages of game stats.
 
 ## The Team
 
