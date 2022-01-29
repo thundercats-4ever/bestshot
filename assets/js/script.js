@@ -1,3 +1,4 @@
+// Global Variables
 const searchBtn = document.getElementById("searchBtn");
 const searchFirst = document.getElementById("searchFirst");
 const searchLast = document.getElementById("searchLast");
@@ -5,6 +6,7 @@ const teamDrop = document.getElementById("populateTeams");
 const pageClick = document.querySelector(".js-page");
 let teamId = 1;
 
+// Functions
 function displayResults(stats) {
   const playerId = stats.player_id;
   let playerUrl = `https://www.balldontlie.io/api/v1/players/${playerId}`;
@@ -21,7 +23,6 @@ function displayResults(stats) {
     });
 }
 function getApi(event) {
-  // fetch request gets the data from the api
   event.preventDefault();
   let searchLast = document.querySelector("#searchLast").value.toLowerCase();
   let searchFirst = document.querySelector("#searchFirst").value.toLowerCase();

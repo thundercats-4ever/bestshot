@@ -1,14 +1,27 @@
-# Project 1
+# Project 1 - Best Shot
 
 ## Description
 
-This is Thundercats-4ever's first project that uses a 3rd party API to display sport stats.
+Best Shot is an NBA search database application used to search individual player stats, as well as current team game stats. User who navigate to Best Shot are given the option to either search players with 2 input boxes (one for first name, one for last name.) Underneath the player search input boxes, there is a dynamic drop down menu with every current team in the NBA and when selected, the user is presented with that team's 25 most recent games. If there are more than 25 game search results, at the bottom of the page, there is a pager function when dynamically populates, giving the user the opportunity to search multiple pages of game stats.
 
-This Application is used to get individual player stats, as well as individual team games/schedules. This application will start at a blank screen with input boxes on the left side if you would like to search for an individual player's stats. Underneath that there will be a drop down box with every team in the NBA and you can look up their 25 most recent games. All games of the season will be saved in this API and by using the page numbers at the bottom that will allow you to look at games further in the past.
+## The Team
+
+- Stephen Marr: [Stephen Marr's personal github](https://github.com/smarr2198)
+- Mousa Haddadin: [Mousa Haddadin's personal github](https://github.com/mhaddadin1)
+- Brian Holbrook: [Brian Holbroook's personal github](https://github.com/holbrookb23)
+- Gwen Ewasko: [Gwen Ewasko's personal github](https://github.com/gwenewasko)
+
+## API Used
+
+[Ball Don't Lie](https://www.balldontlie.io/#introduction)
+
+## Project Presentation
+
+[Link to project presentation](https://docs.google.com/presentation/d/1Q8G8wjesUVlmWYUHw0niuOSbPpcZwKFZBPVU9FKmSoA/edit?usp=sharing)
 
 ## Screenshot
 
-![Project 1 that will show NBA player stats and team records.](./img/projectPage.png)
+![Best Shot app screenshot.](./img/screenshot-thundercats-4ever.github.io-2022.01.29-11_20_47.png)
 
 ## Links to Application
 
