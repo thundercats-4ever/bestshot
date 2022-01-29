@@ -1,14 +1,20 @@
-/* If Needed Extend Tailwinds */
-/* Make Layout First  TODO*/
-/* Style Guts of Each Layout Item (Components)  TODO*/
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
 h1 {
   font-family: "Alfa Slab One", cursive;
   font-size: 4rem !important;
 }
+
 h2 {
   font-weight: bold !important;
   font-size: x-large !important;
 }
+
 h3 {
   font-weight: bold !important;
   font-size: larger !important;
@@ -18,38 +24,56 @@ h3 {
   appearance: none;
 }
 
+.d-f {
+  display: flex;
+}
+
+.d-n {
+  display: none;
+}
+
+.f-d-c {
+  flex-direction: column;
+}
+
+.f-g1 {
+  flex-grow: 1;
+}
+
+.f-w-w {
+  flex-wrap: wrap;
+}
+
 .jc-c {
   justify-content: center;
 }
 
-.d-f {
-  display: flex;
-}
-.jc-sb {
-  justify-content: space-between;
-}
-.f-w-w {
-  flex-wrap: wrap;
-}
 .jc-l {
   justify-content: left;
 }
-.f-d-c {
-  flex-direction: column;
+
+.jc-sb {
+  justify-content: space-between;
 }
+
 .p-1 {
   padding: 1rem;
 }
-.f-g1 {
-  flex-grow: 1;
-}
-.d-n {
-  display: none;
-}
+
 .img-h-w {
   max-height: 100px;
 }
+
 .img-w {
   width: 20%;
+}
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.t-a-c {
+  text-align: center;
 }
 /*  */
